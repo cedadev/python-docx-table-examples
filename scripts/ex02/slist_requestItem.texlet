@@ -1,0 +1,37 @@
+\section*{3.2 Request Item: specifying the number of years for an experiment [requestItem]}
+The request item links a collection of variables with a specific experiment or group of experiments, and a temporal range for output. The 'esid' attribute links to an experiment, and experiment group or a MIP. In the latter case, the request applies to all experiments defined by that MIP.
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Record Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+esid & A link to an experiment, an experiment group or a MIP & This links to an individual experiment, to an experimentGroup, specifying a collection of experiments, or to a MIP. If it links to a MIP it means that the request applies to all experiments defined by that MIP. & \ttt{xs:string} \\ 
+\hline
+esidComment & Comment on experiment(s) linked to. & An explanatory commemt for the esid attribute. & \ttt{xs:string} \\ 
+\hline
+expt & Name of experiment or group of experiments & This is redundant: the information is provided through the esid link. & \ttt{xs:string} \\ 
+\hline
+mip & The MIP making the request.  & Model Intecomparison Project associated with the requestItem. Redundant because this is specified through the requestLink. & \ttt{xs:string} \\ 
+\hline
+nenmax & Number of ensemble members requested.  & If set to -1 then the request applies to to all the ensemble members specified in the ensz attribute of the experiment or experiments associated with the request. Note that ensz is a default ensemble size, and nenmax may be greater if one MIP wants more than the default number of ensembles.  & \ttt{xs:integer} \\ 
+\hline
+nexmax & Maximum number of experiments requested. & Used to provide volume estimate before the links to experiment groups was fully functional. & \ttt{xs:integer} \\ 
+\hline
+ny & Default number of years. & Default number of years, only used if experiment specifications are incomplete: will be redundant in final request. & \ttt{xs:integer} \\ 
+\hline
+nymax & Number of years requested. & Number of years specified by the requesting MIP (will be redundant when links to temporal slices are fully implemented). & \ttt{xs:float} \\ 
+\hline
+preset & Option to override priority set in each variable group & If, for example, preset is set to 2, all priority one variables in the variable group associated with this request are treated as priority 2 variables. & \ttt{xs:integer} \\ 
+\hline
+rlid & Identifier of Corresponding Request Link & Link to a requestLink record, which makes the connection to a variableGroup and a set of objectives. & \ttt{xs:string} \\ 
+\hline
+tab & Redundant? & Redundant attribute ...  & \ttt{xs:string} \\ 
+\hline
+treset & Option to override tier set for experiment(s) & If, for example, treset is set to 1, all tier 2 and 3 experiments associated with this request are treated as tier 1 variables. & \ttt{xs:integer} \\ 
+\hline
+tslice & Selection of years from experiment & Optional link to a time slice specifier which will define subset of the years from an experiment. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

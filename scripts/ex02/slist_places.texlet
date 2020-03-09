@@ -1,0 +1,19 @@
+\section*{Places, States or Reservoirs [places]}
+An abstract entity defining an extensive quantity of something, e.g. liquid water, suspended carbon.
+
+\sectionTable{
+\hline
+label & Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+matter & Substance  &  & \ttt{xs:string} \\ 
+\hline
+mip & Model Intercomparison Project (MIP) &  & \ttt{xs:string} \\ 
+\hline
+pid & Parent Entity & A place, state or reservoir containing this one. & \ttt{xs:string} \\ 
+\hline
+vid & Variable Identifier &  & \ttt{xs:string} \\ 
+}% End of sectionTable argument

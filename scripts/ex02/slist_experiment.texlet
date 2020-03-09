@@ -1,0 +1,35 @@
+\section*{1.5 Experiments [experiment]}
+The experiment record contains the key information from the 'Experiment' sheet of the request template, including the tier of the experiment, the duration and start and end dates.
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+description & Description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Record identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+comment & Comment & Additional information about this experiment group. & \ttt{xs:string} \\ 
+\hline
+egid & Identifier for experiment group & Link to the exptgroup record associated with this experiment. Each experiment belongs to one experiment group. & \ttt{xs:string} \\ 
+\hline
+endy & End year & End year specified for the experiment. This is a string. Fit may contain a year or an explanation which makes reference to another experiment, e.g. 'Year 140 of abrupt4xCO2'. & \ttt{xs:string} \\ 
+\hline
+ensz & Ensemble size & Default ensemble size, excluding multiple start times. Total number of model executions will be nstart time ensz. Note that some MIPs may request data from more than the default ensemble size. & \ttt{aa:st\_\_integerListMonInc} \\ 
+\hline
+mcfg & Model Source Types & Specifies the model source types which are required/allowed for this experiment (see https://github.com/WCRP-CMIP/CMIP6\_Cvs/blob/master/CMIP6\_source\_type.json). Syntax is a space separated list of required source types, follwed by a | and a space separated list of additional allowed source types. & \ttt{xs:string} \\ 
+\hline
+mip & MIP defining experiment & Link to a record defining the primary Model Intercomparison Project responsible for the definition of this experiment. & \ttt{xs:string} \\ 
+\hline
+nstart & Number of Start Dates & For experiments with multiple start times, this gives the number of start times requested. Set to '1' otherwise. & \ttt{xs:integer} \\ 
+\hline
+ntot & Total number of years & Depricated. Initially used as an estimate of number of years. & \ttt{xs:integer} \\ 
+\hline
+starty & Start year & Start year specified for the experiment. This is a string. Fit may contain a year or an explanation which makes reference to another experiment, e.g. 'Year 111 of abrupt4xCO2'. & \ttt{xs:string} \\ 
+\hline
+tier & Tier of Experiment & Experiments are assigned a tier by the MIP specifying the tier, tier 1 experiments being the most important. & \ttt{aa:st\_\_integerListMonInc} \\ 
+\hline
+yps & Years per Simulation Including all Start Years & The number of years per simulation, including all start years. Equal to ES-DOC min\_number\_yrs\_per\_sim times nstart. & \ttt{xs:integer} \\ 
+}% End of sectionTable argument

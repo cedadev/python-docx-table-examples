@@ -1,0 +1,31 @@
+\section*{3.11 Time Slices for Output Requests [timeSlice]}
+Time slices are used in some cases where some diagnostics required only for a subset of the years computed.
+
+\sectionTable{
+\hline
+label & Record Label & Mnemonic label for record & \ttt{xs:string} \\ 
+\hline
+title & Record Title & Title of record & \ttt{xs:string} \\ 
+\hline
+description & Description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Unique identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+child & Child experiment & For type branchOffsetRange, the child attribute carries the name of the experiment which is branched. The time range is then specified in terms of the years in the child experiment. & \ttt{xs:string} \\ 
+\hline
+end & End year & Last year of the time slice. Blank if a startList is given. & \ttt{xs:integer} \\ 
+\hline
+nyears & Total number of years & Total number of years. Leave blank for dayList. For sliceList, the number of discrete slices is given by nyears divided by sliceLen. Otherwise, nyears should be equal to start minus end plus one. & \ttt{xs:float} \\ 
+\hline
+sliceLen & Length of slice & Length of slice if less than the full range from start to end. Units specified by 'sliceLenUnit' if present, otherwise in years.  & \ttt{xs:integer} \\ 
+\hline
+sliceLenUnit & Units of slice length & The units used to specify the slice length. Set to years if left blank. & \ttt{xs:string} \\ 
+\hline
+start & Start year & First year of the time slice. Blank if a startList is given. & \ttt{xs:integer} \\ 
+\hline
+startList & Optional list of start times. & If type is 'dayList', then a list of (year,month,day) triples can be specified. E.g. '1850 1 1 1850 4 1' for first January and April 1850. If this value is given, start and end attributes should be empty.  & \ttt{aa:st\_\_integerList} \\ 
+\hline
+step & Step (years) & The step, in years, between different years in a 'yearList' or different start years in a 'sliceList' or 'sliceListExt'.  & \ttt{xs:float} \\ 
+\hline
+type & Type of time slice & This is a string indicating how the year selection is described: 'simpleRange' is a single span of years indicated by a start and duration; 'yearList' is a collection of single years indicated by a start, number of years and a step; 'sliceList' is a list of multi-year time slices, indicated by a start year, a slice length, a total number of years (which must be an integer multiple of the slice length) and a step between slice starts; 'dayList' specifies a list of days as y/m/d triples; 'monthlyClimatology' implies 12 monthly values averaged over a specified range of years; 'relativeRange' specifies a range of years relative to the start of the simulation; 'branchedYears' specifies a list of years relative to a time in a branched experiment (can also be used for a climatology); 'siblingBranchClimatology' refers to a slice tied to years in another experiment branched from the same parent .. usually historical; 'monthlyClimatologyFinal' refers to a climatology over a final range of years (start and end should be blank). & \ttt{aa:st\_\_sliceType} \\ 
+}% End of sectionTable argument

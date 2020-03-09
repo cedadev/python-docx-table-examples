@@ -1,0 +1,39 @@
+\section*{2.3 Dimensions and related information [structure]}
+The structure record combines specification of dimensions, cell\_measures and cell\_methods attributes. Spatial and temporal dimensions are specified through links to 'spatialshape' and 'temporalshape' records.
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+description & Description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Record Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+cell\_measures & Cell Measures & This can be either a string value for inclusion in the NetCDF variable attribute cell\_measures, or a directive. In the latter case it will be a single word, --OPT or --MODEL. The first of these indicates that the data may be provided either on the cell centres or on the cell boundaries. --MODEL indicates that the data should be provided at the cell locations used for that variable in the model code (e.g. cell vertices). & \ttt{xs:string} \\ 
+\hline
+cell\_methods & Cell Methods & Text for the NetCDF cell\_methods attribute: describes processing used to generate the data values (redundant with cmid). & \ttt{xs:string} \\ 
+\hline
+cids & Identifiers for records in grids section for coordinates & List of links to the records defining coordinates (dimensions referenced from the variable coordinates attribute). & \ttt{aa:st\_\_stringList} \\ 
+\hline
+cmid & Link to Cell Methods Record & Link to a cell methods record. & \ttt{xs:string} \\ 
+\hline
+coords & Coordinates & List of labels of coordinates. Redundant with cids. & \ttt{xs:string} \\ 
+\hline
+dids & Identifiers for records in grids section for dimensions & List of links to the records defining dimensions other than spatial and temporal dimensions. & \ttt{aa:st\_\_stringList} \\ 
+\hline
+flag\_meanings & FLag Meanings & If present, specifies values to be inlcuded in the 'flag\_meanings' attribute. & \ttt{xs:string} \\ 
+\hline
+flag\_values & Flag Values & If present, specifies values to be inlcuded in the 'flag\_values' attribute. & \ttt{xs:string} \\ 
+\hline
+odims & Other Dimensions & Dimensions other than temporal and spatial dimensions (redundant with dids). & \ttt{xs:string} \\ 
+\hline
+procNote & Processing Note & This is used to specify the category of structure. One of: areaType, areaTypeP, glsl, glslp, glslo, gm, h2mcm, misc, oneLevel, xyz, icesheet, xyzplus, zonaletc. & \ttt{xs:string} \\ 
+\hline
+prov & Provenance & Information about the origins of this record. & \ttt{xs:string} \\ 
+\hline
+spid & Spatial Shape &  & \ttt{xs:string} \\ 
+\hline
+tmid & Temporal Shape & Link to a temporalShape record, defining the temporal dimensions. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

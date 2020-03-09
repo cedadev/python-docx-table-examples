@@ -1,0 +1,15 @@
+\section*{1.6 Scientific objectives [objective]}
+The objectives defined by each MIP can be used to select data requirements. 
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+description & Description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Record identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+mip & Endorsed MIP & Link to Model Intercomparison Project with this objective. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

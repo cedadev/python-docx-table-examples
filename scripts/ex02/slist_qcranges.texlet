@@ -1,0 +1,35 @@
+\section*{Quality Control Ranges [qcranges]}
+Data ranges for use in quality control
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Record identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+comment & Comment &  & \ttt{xs:string} \\ 
+\hline
+ok\_max\_mean\_abs & Maximum expected value of the global mean absolute value at each point in time & This value, if set, will be used  in quality control tests, and files containing data values above this value will be marked as containing errors. & \ttt{xs:float} \\ 
+\hline
+ok\_max\_mean\_abs\_status & Status of ok\_mx\_mean\_abs & Indicates the degree of confidence in the value ok\_max\_mean\_abs provided. Valid values are robust, suggested or tentative. Robust values are based on previous results from a broad range of models with consistent output or on clear physical constraints. & \ttt{xs:string} \\ 
+\hline
+ok\_min\_mean\_abs & Minimum expected value of the global mean absolute value at each point in time & This value, if set, will be used  in quality control tests, and files containing data values above this value will be marked as containing errors. & \ttt{xs:float} \\ 
+\hline
+ok\_min\_mean\_abs\_status & Status of ok\_min\_mean\_abs & Indicates the degree of confidence in the value ok\_min\_mean\_abs provided. Valid values are robust, suggested or tentative. Robust values are based on previous results from a broad range of models with consistent output or on clear physical constraints. & \ttt{xs:string} \\ 
+\hline
+prov & Provenance &  & \ttt{xs:string} \\ 
+\hline
+url & Link to review page & Link to a web page providing background information. & \ttt{xs:string} \\ 
+\hline
+valid\_max & Maximum expected value for this variable. & The maximum expected value will be used, if set, in quality control tests, and files containing data values above this value will be marked as containing errors. & \ttt{xs:float} \\ 
+\hline
+valid\_max\_status & Status of valid\_max & Indicates the degree of confidence in the valid\_max value provided. Valid values are robust, suggested or tentative. Robust values are based on previous results from a broad range of models with consistent output or on clear physical constraints. & \ttt{xs:string} \\ 
+\hline
+valid\_min & Minimum expected value for this variable. & The minimum expected value will be used, if set, in quality control tests, and files containing data values below this value will be marked as containing errors. & \ttt{xs:float} \\ 
+\hline
+valid\_min\_status & Status of valid\_min & Indicates the degree of confidence in the valid\_min value provided. Valid values are robust, suggested or tentative. Robust values are based on previous results from a broad range of models with consistent output or on clear physical constraints. & \ttt{xs:string} \\ 
+\hline
+vid & Variable & Link to variable record & \ttt{xs:string} \\ 
+}% End of sectionTable argument

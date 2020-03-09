@@ -1,0 +1,27 @@
+\section*{1.2 MIP Variable [var]}
+Each MIP variable record defines a MIP variable name, associated with a CF Standard Name.
+
+\sectionTable{
+\hline
+label & Variable Name & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Long name & This value is used as the long\_name variable attribute in the NetCDF files. It should conform to the data request style guide for titles.  & \ttt{xs:string} \\ 
+\hline
+description & Record Description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Record Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+procComment & Processing Comments & Free text comment about processing of the variable. & \ttt{xs:string} \\ 
+\hline
+procnote & Processing Notes & Space separated list of keywords. & \ttt{aa:st\_\_stringList} \\ 
+\hline
+prov & Notes on Provenance of Variable Specifications & Information on the provenance of the specification of this variables. & \ttt{xs:string} \\ 
+\hline
+provmip & MIP Defining this Variable & The MIP responsible for the original definition of this quantity & \ttt{xs:string} \\ 
+\hline
+sn & CF Standard Name & The CF Standard Name is part of an extensive vocabulary maintained within the CF Convention. & \ttt{xs:string} \\ 
+\hline
+unid & Link to Units section & Link to a unit description record. & \ttt{xs:string} \\ 
+\hline
+units & Units of Measure & The units in which the variable is to be measured, as a short text string. They must conform with the canonical units of the CF Standard Name. A link to a record describing the units in more detail is given be the unid attribute. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

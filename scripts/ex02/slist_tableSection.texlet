@@ -1,0 +1,19 @@
+\section*{3.4 CMOR Table Sections [tableSection]}
+Section of a MIP tables
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Record Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+gpid & Identifier for CMOR Tables & Link to a record defining a CMOR table. & \ttt{xs:string} \\ 
+\hline
+mip & Project & Redundant. Specification of a MIP. & \ttt{xs:string} \\ 
+\hline
+ref & Reference & Comment on provenance. & \ttt{xs:string} \\ 
+\hline
+refNote & Note on reference & Further information on provenance. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

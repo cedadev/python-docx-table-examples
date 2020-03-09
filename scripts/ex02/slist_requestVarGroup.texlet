@@ -1,0 +1,17 @@
+\section*{3.1 Request variable group: a collection of request variables [requestVarGroup]}
+A group of request variables, or a table, which can be referred to from a request link.
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Record Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+mip & Endorsed MIP defining the variable group & Link to the MIP which specified this collection of variables. The collection may be re-used by other MIPs through the requestLink records. & \ttt{xs:string} \\ 
+\hline
+ref & Reference & Information about the origins of this group & \ttt{xs:string} \\ 
+\hline
+refNote & Reference Note & Further information about the origins of this group. & \ttt{xs:string} \\ 
+}% End of sectionTable argument

@@ -1,0 +1,15 @@
+\section*{Units [units]}
+The units of the parameters defined in the {var} section. The 'text' attribute carries a plain text representation of the units of measure (e.g. m s-1) or, for dimensionaless variables, a scaling factor (e.g. 1.e-9) to be used for  the variable. 
+
+\sectionTable{
+\hline
+label & Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+uid & Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+group & Group & A group, designated by a string value, expresses a relationship between units. & \ttt{xs:string} \\ 
+\hline
+text & Text representation of units & Plain text representation with no special characters & \ttt{xs:string} \\ 
+}% End of sectionTable argument

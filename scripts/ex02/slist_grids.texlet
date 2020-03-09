@@ -1,0 +1,51 @@
+\section*{1.7 Specification of dimensions [grids]}
+Dimensions used by variables in the data request
+
+\sectionTable{
+\hline
+label & CMOR dimension & Unique label & \ttt{xs:string} \\ 
+\hline
+title & long name & Used for the variable long\_name attribute & \ttt{xs:string} \\ 
+\hline
+description & description & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+altLabel & output dimension name & Name used for the dimension in NetCDF files & \ttt{xs:string} \\ 
+\hline
+axis & axis & For spatial or temporal dimensions, set to X, Y, Z or T. & \ttt{xs:string} \\ 
+\hline
+bounds & bounds? &  & \ttt{xs:string} \\ 
+\hline
+boundsRequested & bounds\_ requested &  & \ttt{aa:st\_\_floatList} \\ 
+\hline
+boundsValues & bounds \_values &  & \ttt{xs:string} \\ 
+\hline
+coords & coords\_attrib &  & \ttt{xs:string} \\ 
+\hline
+direction & stored direction & decreasing, increasing or empty & \ttt{xs:string} \\ 
+\hline
+isGrid & grid? &  & \ttt{xs:string} \\ 
+\hline
+isIndex & index axis? & Set to 'OK' if the axis is an index axis with no coordinate values. Used, for example, for the generic vertical coordinates in the atmosphere, 'alev'. & \ttt{xs:string} \\ 
+\hline
+positive & positive &  & \ttt{xs:string} \\ 
+\hline
+requested & requested &  & \ttt{xs:string} \\ 
+\hline
+standardName & standard name & Standard Name from the CF Conventions, used for the standard\_name attribute of the axis variable. & \ttt{xs:string} \\ 
+\hline
+tables & CMOR table(s) & List of tables which make use of this dimension & \ttt{xs:string} \\ 
+\hline
+tolRequested & tol\_on\_requests: variance from requested values that is tolerated &  & \ttt{xs:string} \\ 
+\hline
+type & type & Data type is specified using Fortran code words: character, double, integer, real  & \ttt{aa:st\_\_fortranType} \\ 
+\hline
+units & units & Units of measure used for the axis data variable. & \ttt{xs:string} \\ 
+\hline
+valid\_max & valid\_max &  & \ttt{xs:float} \\ 
+\hline
+valid\_min & valid\_min &  & \ttt{xs:float} \\ 
+\hline
+value & value of a scalar coordinate & This attribute is only for scalar coordinates. Otherwise use *requested* & \ttt{xs:string} \\ 
+}% End of sectionTable argument

@@ -1,0 +1,25 @@
+\section*{3.8 Remarks about other items [remarks]}
+The remarks section contains additional comments about other records. It can be used to add detail without adding to the complexity of the other sections.
+
+\sectionTable{
+\hline
+label & Record Label & {\it A single word,  with restricted character set. Specialization of SKOS prefLabel.} & \ttt{xs:string} \\ 
+\hline
+title & Record Title & {\it A few words describing the object. Specialization of Dublin Core title.} & \ttt{xs:string} \\ 
+\hline
+description & Free text remarks -- unless there are specific restrictions associated with the class attribute of this remark & {\it An extended description of the object/concept. Specialization of SKOS definition.} & \ttt{xs:string} \\ 
+\hline
+uid & Record identifier & {\it Identifier, unique within a given version of the data request.} & \ttt{aa:st\_\_uid} \\ 
+\hline
+class & Class categorisation of remarks & Different classes of remark support a range of specialised usages: free (a free text comment), modelTypeReq (a model type requirement), modelTypeExcl (a model type exclusion), varAlt (an alternative variable that my be used instead of this one), varSup (an alternative variable which, if selected makes this one redundant), attChange (a change in the value of an attribute -- old value provided in 'techNote'). & \ttt{xs:string} \\ 
+\hline
+prov & Provenance & Information about the provenance of this record. & \ttt{xs:string} \\ 
+\hline
+qid & Identifier linking to a related record. & Identifier required for classes modelTypeReq, modelTypeExcl, varAlt, varSup. For the first two classes, the identifier points to a model type specification, for the last two it points to an output variable specification. & \ttt{xs:string} \\ 
+\hline
+tattr & Target attribute: an attribute of the target item, or 'ALL' & This attribute may be used to identify a specific attribute on the record identified by tid. & \ttt{xs:string} \\ 
+\hline
+techNote & Optional additional machine readable content (though not restricted by the schema) & Intended for machine readable content. & \ttt{xs:string} \\ 
+\hline
+tid & Target identifier: the record ID of the item this refers to. & Link to a record which this remark relates to. & \ttt{xs:string} \\ 
+}% End of sectionTable argument
